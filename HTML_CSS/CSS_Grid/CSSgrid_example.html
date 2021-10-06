@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="CSSgrid_example.css" rel="stylesheet">
+    <title>CSS Grid Examples</title>
+</head>
+<body>
+    <header>
+        <h1>BNTA - CSS GRID EXAMPLES</h1>
+    </header>
+
+    <article class="example1 container">
+        <h2>Example 1 - Display Grid</h2>
+        <div class="horizContainer">
+            <div class="labels_list">
+                <p for="example1_A">(leftmost)<br />1A - display: grid</p>
+                <p for="example1_B">(rightmost)<br />1B - display: inline-grid</p>
+            </div>
+            <section id="example1_A" class="example">
+                <div class="box" ></div>
+                <div class="box" ></div>
+            </section>
+            <div class="outline">
+                <section id="example1_B" class="example">
+                    <div class="box" ></div>
+                    <div class="box" ></div>
+                </section>
+            </div>
+        </div>
+    </article>
+
+    <article class="example2 container">
+        <h2>Example 2 - Grid Templates</h2>
+        <label for="example2_A">2A - grid-template-columns: 1fr 2fr 1fr</label>
+        <section id="example2_A" class="example">
+            <div class="box" >1fr</div>
+            <div class="box" >2fr</div>
+            <div class="box" >1fr</div>
+        </section>
+        <label for="example2_B">2A - grid-template-rows: 1fr 120px 1fr</label>
+        <section id="example2_B" class="example">
+            <div class="box" >1fr</div>
+            <div class="box" >120px</div>
+            <div class="box" >1fr</div>
+        </section>
+    </article>
+
+    <article class="example3 container">
+        <h2>Example 3 - Grid Templates Continued</h2>
+        <label for="example3_A">3A - repeat - grid-template-columns: 4fr repeat(2, 1fr 2fr)</label>
+        <section id="example3_A" class="example">
+            <div class="box" >4fr</div>
+            <div class="box" >1fr</div>
+            <div class="box" >2fr</div>
+            <div class="box" >1fr</div>
+            <div class="box" >2fr</div>
+        </section>
+        <label for="example3_B">3B - minmax - grid-template-columns: 1fr minmax(150px, 1fr) 1fr</label>
+        <section id="example3_B" class="example">
+            <div class="box" >1fr</div>
+            <div class="box" >min: 150px<br />max: 1fr</div>
+            <div class="box" >1fr</div>
+        </section>
+        <label for="example3_C">3C - minmax - grid-template-columns: 1fr minmax(150px, 1fr) 1fr</label>
+        <section id="example3_C" class="example">
+            <div class="box" >1fr</div>
+            <div class="box" >min: 150px<br />max: 1fr</div>
+            <div class="box" >1fr</div>
+        </section>
+    </article>
+
+    <article class="example4 container">
+        <h2>Example 4 - Grid Templates Areas</h2>
+        <label for="example4_A">4A - grid-template-areas</label>
+        <section id="example4_A" class="example">
+            <div class="box header" >header</div>
+            <div class="box primary" >primary</div>
+            <div class="box secondary" >secondary</div>
+            <div class="box footer" >footer</div>
+        </section>
+    </article>
+
+    <article class="example5 container">
+        <div class="labels_list">
+            <h2>Example 5 - Grid Gap</h2>
+            <p for="example5_A">(top-right)<br />5A - row-gap: 1rem</p>
+            <p for="example5_B">(bottom-left)<br />5B - column-gap: 1rem</p>
+            <p for="example5_C">(bottom-right)<br />5C - gap: 1rem</p>
+        </div>
+        <section id="example5_A" class="example">
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+        </section>
+        
+        <section id="example5_B" class="example">
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+        </section>
+        
+        <section id="example5_C" class="example">
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+        </section>
+        
+    </article>
+
+</body>
+</html>

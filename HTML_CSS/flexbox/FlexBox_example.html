@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="FlexBox_example.css" rel="stylesheet">
+    <title>FlexBox Examples</title>
+</head>
+<body>
+    <header>
+        <h1>BNTA - FLEXBOX EXAMPLES</h1>
+    </header>
+
+    <article class="example1 container">
+        <h2>Example 1 - Flex Direction</h2>
+        <section class="horizContainer">
+            <div>
+                <p for="example1_A">(leftmost)<br />1A - flex-direction: row</p>
+                <p for="example1_B">(rightmost)<br />1B - flex-direction: column</p>
+            </div> 
+            <section id="example1_A" class="example">
+                <div class="box" ></div>
+                <div class="box" ></div>
+            </section>
+            <section id="example1_B" class="example">
+                <div class="box" ></div>
+                <div class="box" ></div>
+            </section>
+        </section>
+    </article>
+
+    <article class="example2 container">
+        <h2>Example 2 - Justify Content Basics</h2>
+        <label for="example2_A">2A - justify-content: flex-start</label>
+        <section id="example2_A" class="example">
+            <div class="box" ></div>
+        </section>
+        <label for="example2_B">2B - justify-content: center</label>
+        <section id="example2_B" class="example">
+            <div class="box" ></div>
+        </section>
+        <label for="example2_C">2C - justify-content: flex-end</label>
+        <section id="example2_C" class="example">
+            <div class="box" ></div>
+        </section>
+    </article>
+
+    <article class="example3 container">
+        <h2>Example 3 - Justify Content Continued</h2>
+        <label for="example3_A">3A - justify-content: space-between</label>
+        <section id="example3_A" class="example">
+            <div class="box" ></div>
+            <div class="box" ></div>
+        </section>
+        <label for="example3_B">3B - justify-content: space-around</label>
+        <section id="example3_B" class="example">
+            <div class="box" ></div>
+            <div class="box" ></div>
+        </section>
+        <label for="example3_C">3C - justify-content: space-evenly</label>
+        <section id="example3_C" class="example">
+            <div class="box" ></div>
+            <div class="box" ></div>
+        </section>
+    </article>
+
+    <article class="example4 container">
+        <h2>Example 4 - Align Content</h2>
+        <section class="horizContainer">
+            <div class="labels_list">
+                <p for="example4_A">(leftmost)<br />4A - align-items: flex-start</p>
+                <p for="example4_B">(center)<br />4B - align-items: center</p>
+                <p for="example4_C">(rightmost)<br />4C - align-items: flex-end</p>
+            </div>
+            <section id="example4_A" class="example">
+                <div class="box" ></div>
+            </section>
+            
+            <section id="example4_B" class="example">
+                <div class="box" ></div>
+            </section>
+           
+            <section id="example4_C" class="example">
+                <div class="box" ></div>
+            </section>
+        </section>
+    </article>
+
+    <article class="example5 container">
+        <h2>Example 5 - Wrapping</h2>
+        <label for="example5_A">5A - flex-wrap: nowrap</label>
+        <section id="example5_A" class="example">
+            <div class="box" >1</div>
+            <div class="box" >2</div>
+            <div class="box" >3</div>
+            <div class="box" >4</div>
+            <div class="box" >5</div>
+            <div class="box" >6</div>
+            <div class="box" >7</div>
+            <div class="box" >8</div>
+        </section>
+        <label for="example5_B">5B - flex-wrap: wrap</label>
+        <section id="example5_B" class="example">
+            <div class="box" >1</div>
+            <div class="box" >2</div>
+            <div class="box" >3</div>
+            <div class="box" >4</div>
+            <div class="box" >5</div>
+            <div class="box" >6</div>
+            <div class="box" >7</div>
+            <div class="box" >8</div>
+        </section>
+        <label for="example5_C">5C - flex-wrap: wrap-reverse</label>
+        <section id="example5_C" class="example">
+            <div class="box" >1</div>
+            <div class="box" >2</div>
+            <div class="box" >3</div>
+            <div class="box" >4</div>
+            <div class="box" >5</div>
+            <div class="box" >6</div>
+            <div class="box" >7</div>
+            <div class="box" >8</div>
+        </section>
+    </article>
+    
+    <article class="example6 container">
+        <h2>Example 6 - Flex Grow</h2>
+        <label for="example6_A">6A - flex-grow: 0 (default)</label>
+        <section id="example6_A" class="example">
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+        </section>
+        <label for="example6_B">6B - flex-grow: 1</label>
+        <section id="example6_B" class="example">
+            <div class="box" >1</div>
+            <div class="box" >1</div>
+            <div class="box" >1</div>
+        </section>
+        <label for="example6_C">6C - flex-grow: 1, center item - flex-grow: 3</label>
+        <section id="example6_C" class="example">
+            <div class="box" >1</div>
+            <div class="box" >3</div>
+            <div class="box" >1</div>
+        </section>
+    </article>
+
+    <article class="example7 container">
+        <h2>Example 7 - Flex Shrink</h2>
+        <label for="example7_A">7A - flex-shrink: 0</label>
+        <section id="example7_A" class="example">
+            <div class="box" >0</div>
+            <div class="box" >0</div>
+            <div class="box" >0</div>
+        </section>
+        <label for="example7_B">7B - flex-shrink: 1 (default)</label>
+        <section id="example7_B" class="example">
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+        </section>
+        <label for="example7_C">7C - flex-shrink: 1, center item - flex-shrink: 3</label>
+        <section id="example7_C" class="example">
+            <div class="box" >1</div>
+            <div class="box" >3</div>
+            <div class="box" >1</div>
+        </section>
+    </article>
+
+    <article class="example8 container">
+        <div class="labels_list">
+            <h2>Example 8 - Grid Gap</h2>
+            <p for="example8_A">(top-right)<br />8A - row-gap: 1rem</p>
+            <p for="example8_B">(bottom-left)<br />8B - column-gap: 1rem</p>
+            <p for="example8_C">(bottom-right)<br />8C - gap: 1rem</p>
+        </div>
+        <section id="example8_A" class="example">
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+        </section>
+        
+        <section id="example8_B" class="example">
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+        </section>
+        
+        <section id="example8_C" class="example">
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+            <div class="box" ></div>
+        </section>
+        
+    </article>
+
+</body>
+</html>

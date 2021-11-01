@@ -21,7 +21,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 - **[Homebrew](https://brew.sh/)** to make installing/managing packages easier
 
 ```sh
-# step 1 - downlaod
+# step 1 - download
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # step 2 - check your username for the next step
@@ -31,7 +31,7 @@ whoami
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/your_username_here/.zprofile\n    eval "$(/opt/homebrew/bin/brew shellenv)"\n
 ```
 
-- **[Git](https://formulae.brew.sh/formula/git#default)** for version control. We'll go through SSH setup again on Monday.
+- **[Git](https://formulae.brew.sh/formula/git#default)** for version control. 
 
 ```sh
 # step 1 - installation
@@ -47,19 +47,6 @@ git config --global init.defaultBranch main
 brew install node
 ```
 
-- **[Java](https://formulae.brew.sh/cask/adoptopenjdk#default)** for running Java code
-
-```sh
-# step 1 - installation
-brew install adoptopenjdk16
-
-# step 2 - setting default Java version
-echo 'export PATH="/Library/Java/JavaVirtualMachines/adoptopenjdk-16.jdk/Contents/Home/bin:$PATH"' >> ~/.zshrc
-
-# step 3 - reload settings with updates
-source ~/.zshrc 
-```
-
 - **[PostgreSQL](https://www.postgresql.org/)** for database management
 
 ```sh
@@ -73,12 +60,16 @@ brew services start postgresql
 createdb your_username_here
 ```
 
+You can also install PostgreSQL using the Postgres.app link below.
+
 ## Installing Apps
 
 Follow the links to download each program.
 
 - **[VSCode](https://code.visualstudio.com/)** for code editing, plus any extensions you want to add.
+- **[Java 17](https://jdk.java.net/17/)**
 - **[IntelliJ](https://www.jetbrains.com/idea/download/#section=mac)** for Java editing. Make sure you select Community Edition (unless you want to pay for it) and the Apple Silicon version from the dropdown.
+- **[Postgres.app](https://postgresapp.com/)** as an alternative method of installing PostgrSQL
 - **[Postico](https://eggerapps.at/postico/)** for inspecting databases.
 - **[Postman](https://www.postman.com/)** for querying APIs. You'll need to create an account, but it's free.
 - **[Chrome](https://www.google.co.uk/chrome)** for internet access. You'll also need the [React developer tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) extension.

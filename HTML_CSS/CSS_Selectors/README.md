@@ -6,7 +6,7 @@
 
 ### Introduction
 
-At the heart of every webpage, you have HTML markup defining the *"What?"* and CSS defining the *"How?"*. With the combination of the two, many great things are possible and so understanding how the two interlink is a great step towards becoming a proficient web developer. CSS Selector types is a topic which is often glossed over by beginner web developers who then proceed to become tangled in a web of classes, ids and specificity. Balancing each of these topics, while ensuring that your code is *DRY*, is true testament to a web developers frontend proficiency and thus it is worth starting your learning early.
+At the heart of every webpage, you have HTML markup visually defining the *"What?"* and CSS defining the *"How?"*. With the combination of the two, many great things are possible and so understanding how the two interlink is a great step towards becoming a proficient web developer. CSS Selector types is a topic which is often glossed over by beginner web developers who then proceed to become tangled in a web of classes, ids and specificity. Balancing each of these topics, while ensuring that your code is *DRY*, is true testament to a web developers' frontend proficiency and thus it is worth starting your learning early.
 
 [w3schools - Interact CSS Selector Site](https://www.w3schools.com/cssref/trysel.asp)
 
@@ -16,9 +16,9 @@ At the heart of every webpage, you have HTML markup defining the *"What?"* and C
 
 *Specificity* is the measure of how specific a CSS selector statement is—which in turn defines what set of CSS properties are applied to the specified element(s) when multiple values are set. In a growing webpage, with a growing list of CSS classes and declarations, you may find that you start running into problems with seemingly automatically applying styles or with styles not appearing where you'd expect them to. The latter is usually caused due to a conflict in specificity (or a typo!), while the former is from poor organisation of your classes and/or CSS declarations. To avoid these two common issues, we hence recommend following these guidelines:
 
-- When starting out, give everything a class, make each selector unique. This is especially true during any team projects where many people are working on one site. Your intuition for knowing when and where a class should be applied (especially once you begin using more generalised classes) will increase with experience
+- When starting out, give everything a class, making each element (or set of elements) unique. This is especially true during any team projects where many people are working on one site. Your intuition for knowing when and where a class should be applied (especially once you begin using more generalised classes) will increase with experience
 
-- As with above, avoid using general element selectors (*e.g.* `div` or `p`) unless as a descendant of a specified class or part of a reset block (see next)
+- As with above, avoid using general element selectors (*e.g.* `div` or `p`) unless used as a descendant of a specified class or part of a reset block (see next)
 
 - Avoid applying any global styling. Page resets (*e.g.* [Piccalilli - A Modern CSS Reset](https://piccalil.li/blog/a-modern-css-reset/)) can be incredibly useful and many devs use them, but make sure you know what you are applying and where!
 
@@ -26,12 +26,14 @@ At the heart of every webpage, you have HTML markup defining the *"What?"* and C
 
 - Make the location of your CSS code make sense. If you are working on a project with multiple CSS files, make sure that each file is clearly labelled so that they can be understood by both your teammates and people who are new to your code. This is especially important later when you look at React and begin component-based webpage construction
 
+- Don't shy away from using comments. Signposts directing another member of your team, or your future self, is not a sign of inexperience. Rather it is a great way to show that you understand what you're applying and how that affects your site
+
 
 ## CSS Selectors
 
 *But what is a CSS Selector?* A CSS Selector is simply the means by which you specify a piece of HTML markup to be styled. You will mostly likely have already encountered the `.class` and `#id` selector types in your earlier learning. There are however many other selector types and means of combining them. This document aims to outline many of the common selector types and use cases so that you may produce *DRY-er* code and hopefully avoid that next specificity hole.
 
-There are more selectors than you will find in the following lists, however these are the selector types which you will find most commonly used. Find some resources below if you wish to view a complete guide.
+There are more selectors than you will find in the following lists, however these are the selector types you will likely most commonly use. Follow the links below if you wish to view a complete guide.
 
 [MDN - CSS Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
 
@@ -41,19 +43,19 @@ There are more selectors than you will find in the following lists, however thes
 
 - `*` (wildcard)
 
-	The wildcard selector can be used to select ***everything*** within a document
+	The wildcard selector can be used to select ***everything*** within a document. It is commonly used within a reset block.
 	
 - `element`
 
-	The element selector is used to select ***all*** elements of the specified type (*e.g.* p, div, section)
+	The element selector is used to select ***all*** elements of the specified type (*e.g.* p, div, section). Used most commonly to select all elements of one type to apply global styling (*e.g.* targeting all h1 elements to apply an underline)
 	
 - `.class`
 
-	The class selector is used to select ***all*** elements with the specified class attached
+	The class selector is used to select ***all*** elements with the specified class attached. This is the most common selector type you will use, especially at the beginning of your web dev career if you follow the guidance above.
 	
 - `#id`
 
-	The ID selector is used to select the ***single*** element with the specified ID. Remember that ID's are unique and thus single-use, unlike classes
+	The ID selector is used to select the ***single*** element with the specified ID. Remember that ID's are unique and thus single-use, unlike classes. If you try to apply an `id` to multiple elements then the styling will not be applied to either the later or both elements. Use this when you have an element which is unique within your site
 	
 - `[attribute]`
 
@@ -61,7 +63,7 @@ There are more selectors than you will find in the following lists, however thes
 	
 - `[attribute=value]`
 
-	By specifying the value of the attribute, you can gain further control on what elements you are selecting. This is again incredibly useful for when you are using custom HTML attributes. You could, using the same example as before, make your retractable menu switch between `visibility: hidden` and `visibility: visible` by selecting only when `data-active="true"`—a key detail when coding for accessibility
+	By specifying the value of the attribute, you can gain further control on what elements you are selecting. This is again incredibly useful for when you are using custom HTML attributes. You could, using the same example as above, make your retractable menu switch between `visibility: hidden` and `visibility: visible` by selecting only when `data-active="true"`—a key detail when coding for accessibility
 
 ### Combinations
 
@@ -79,7 +81,7 @@ There are more selectors than you will find in the following lists, however thes
 	
 - `.class1 .class2`
 
-	Stating two (or more) classes brings in about structural considerations to your selection. This example selects all elements with the class `class2` which are descendants of an element with class `class1`
+	Stating two (or more) classes brings in structural considerations to your selection. This example selects all elements with the `class="class2"` which are descendants of an element with `class="class1"`
 	
 - `element1 > element2`
 
@@ -87,7 +89,7 @@ There are more selectors than you will find in the following lists, however thes
 	
 - `element1 + element2`
 
-	The addition symbol is used to select the elements of type `element2` which occur directly after each of type `element1`
+	The addition symbol is the *adjacent sibling combinator* and is used to select the elements of type `element2` which occur directly after each of type `element1`, on the same level
 	
 
 ### Pseudo-classes
@@ -96,15 +98,15 @@ There are more selectors than you will find in the following lists, however thes
 
 [https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes]()
 
-All CSS pseudo-classes start with a single colon `:`. You can think of these as context selectors which select a special state of the specified element. (*e.g.* `a:visited` selects all anchor elements which have previously been visited by the user agent)
+All CSS pseudo-classes start with a single colon `:`. You can think of these as **context selectors** which select a special state of the specified element. (*e.g.* `a:visited` selects all anchor elements which have previously been visited by the user agent)
 
 - `:hover`
 
-	Is active when the item is targeted by the mouse
+	Activates when the item is targeted by the mouse
 
 - `:focus`
 
-	Is active when the user-agent targets the element (usually achieved by [tab]-ing)
+	Activates when the user-agent targets the element (usually achieved by `[tab]`-ing to the element or after being activated)
 	
 - `:focus-within`
 
@@ -112,15 +114,15 @@ All CSS pseudo-classes start with a single colon `:`. You can think of these as 
 
 - `:active`
 
-	Is active when the element has been activated by the user agent (*e.g.* clicked on)
+	Activates when the element has been activated by the user agent (*e.g.* is being clicked on)
 
 - `:link`
 
-	Is active if the associated link **has not** been visited previously
+	Activates if the associated link **has not** been visited previously
 
 - `:visited` 
 
-	Is active if the associated link **has** been visited previously
+	Activates if the associated link **has** been visited previously
 	
 - `:root`
 
@@ -138,23 +140,22 @@ All CSS pseudo-classes start with a single colon `:`. You can think of these as 
 
 	Selects the last child of an element
 	
-There are more pseudo-classes than in the list above, we have simply highlighted those which we believe are most commonly used. A group of pseudo-classes which I have not listed above but that may be worth being aware of all relate to `form` elements. The MDN documentation linked above is a great resource to view an exhaustive list of pseudo-classes.
+There are more pseudo-classes than in the list above, we have simply highlighted those which we believe would be most useful to you. A group of pseudo-classes which I have not listed above but that may be worth exploring all relate to the `form` element. The MDN documentation linked above is a great resource to view an exhaustive list of pseudo-classes.
 
 ### Pseudo-elements
 
 [https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements]()
 
-All CSS pseudo-elements start with a double colon `::` and represent a specific region within an established element. They act as if they have added in a new HTML element to your markup. There are around 16 pseudo-elements listed in the MDN documentation, many of which are experimental. Each have their own niche use, and some may find themselves at home within certain designs, however we are only going to cover two of the most important pseudo-elements here: `::before` and `::after`:
+All CSS pseudo-elements start with a double colon `::` and represent a specific region **within an established element**. They act as if they have added in a new HTML element to your markup. There are around 16 pseudo-elements listed in the MDN documentation, many of which are experimental. Each have their own niche use, and some may find themselves at home within certain designs, however we are only going to cover two of the most important pseudo-elements here: `::before` and `::after`
 
 - `::before`
 
-	As you may be able to guess, the `::before` pseudo-element selects the region just before the associated element. This can be incredibly powerful for *e.g.* assigning regions which grow to fill the space provided, hence positioning the element a specific way, or; for applying a background colour or image which are later unaffected by an applied `filter` property.
+	As you may be able to guess, the `::before` pseudo-element selects the region **just before** the associated element. This can be incredibly powerful for *e.g.* assigning regions which grow to fill the space provided, hence positioning the element a specific way, or; for applying a background colour or image which are later unaffected by an applied `filter` property
 	
 - `::after`
 
-	Reflection of the `::before` element, the `::after` pseudo-element selects the region immediately following the specified element.
+	Reflection of the `::before` element, the `::after` pseudo-element selects the region immediately following the specified element
 	
 Pseudo-elements are incredibly powerful when used correctly, and can often help tidy up your markup. Their use-case, however, isn't always the most obvious. The below CSS Tricks article outlines seven ways you may use pseudo-elements:
 
 [https://css-tricks.com/7-practical-uses-for-the-before-and-after-pseudo-elements-in-css/]()
-
